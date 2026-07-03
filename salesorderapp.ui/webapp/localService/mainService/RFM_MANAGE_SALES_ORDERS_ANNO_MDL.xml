@@ -1,0 +1,2176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/rfm_manage_sales_orders_srv/$metadata">
+        <edmx:Include Namespace="RFM_MANAGE_SALES_ORDERS_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="rfm_manage_sales_orders_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_DischannelvaluehelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Distribution Channel"/>
+                        <PropertyValue Property="TypeNamePlural" String="Distribution Channels"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistributionChannel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistributionChannelName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>DistributionChannel</PropertyPath>
+                        <PropertyPath>DistributionChannelName</PropertyPath>
+                        <PropertyPath>SalesOrganization</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_OrgDivisionValueHelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Division"/>
+                        <PropertyValue Property="TypeNamePlural" String="Divisions"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Division"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DivisionName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistributionChannel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Division</PropertyPath>
+                        <PropertyPath>DivisionName</PropertyPath>
+                        <PropertyPath>SalesOrganization</PropertyPath>
+                        <PropertyPath>DistributionChannel</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrder">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrderItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RequestedDeliveryDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/FirstDeliveryDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/HigherLevelItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocumentType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SDDocumentCategory">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocumentDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/CreationDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDistrict">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/ShippingCondition">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/CustomerGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AdditionalCustomerGroup1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AdditionalCustomerGroup2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AdditionalCustomerGroup3">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AdditionalCustomerGroup4">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AdditionalCustomerGroup5">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RetailAdditionalCustomerGrp6">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RetailAdditionalCustomerGrp7">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RetailAdditionalCustomerGrp8">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RetailAdditionalCustomerGrp9">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RetailAdditionalCustomerGrp10">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/CustomerPurchaseOrderDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/DeliveryBlockReason">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/HeaderBillingBlockReason">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/CustomerPaymentTerms">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SDDocumentReason">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/HdrGeneralIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/OvrlItmGeneralIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/TotalCreditCheckStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/HeaderBillgIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/OvrlItmBillingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/OverallPricingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/HeaderDelivIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/OvrlItmDelivIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/DepartmentClassificationByCust">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/Material">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RqmtIsSupAssgmtRelevant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AgrmtValdtyStartDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/AgrmtValdtyEndDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocumentHasRejection">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/PricingType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocsInclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesDocsExclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrdItemsAreSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrdItemIsSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/SalesOrdGnrcArticleIsSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/MngSlsOrdsMassUpdateExecMode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType/FormattedSalesDocumentItem">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdGnrcItmType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementSegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrderItem"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesDocumentType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/FirstDeliveryDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SDDocumentCategory">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/CreationDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/HdrGeneralIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/OvrlItmGeneralIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/TotalCreditCheckStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/HeaderBillgIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/OvrlItmBillingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/OverallPricingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/HeaderDelivIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/OvrlItmDelivIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/DepartmentClassificationByCust">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/Material">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/Plant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/ShippingPoint">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/DeliveryPriority">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/RqmtIsSupAssgmtRelevant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/ProductGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/AdditionalMaterialGroup1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/AdditionalMaterialGroup2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/AdditionalMaterialGroup3">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/AdditionalMaterialGroup4">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/AdditionalMaterialGroup5">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesDocumentHasRejection">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/PricingType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/ReleaseDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesDocsInclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesDocsExclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesOrdHeadersAreSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/MngSlsOrdsMassUpdateExecMode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/_CustomerGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType/SalesOrder">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdHdrType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Document"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Documents"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'Sales Document' of annotation 'UI.HEADERINFO.TITLE' in proj./view 'C_RFM_MaSaDoEditSlsOrdHdr' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'Sales Document' of annotation 'UI.HEADERINFO.DESCRIPTION' in proj./view 'C_RFM_MaSaDoEditSlsOrdHdr' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedDeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesDistrict"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOffice"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrder">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrderItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerPurchaseOrdType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/Material">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerPaymentTerms">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdIncotermsClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdIncotermsLocation1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OrderQuantityUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/HigherLevelItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdPricingDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrderCustomerPriceGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdShippingType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerConditionGroup1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerConditionGroup2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerConditionGroup3">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerConditionGroup4">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SlsOrdCustomerConditionGroup5">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesDocumentType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SDDocumentCategory">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/CreationDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/HdrGeneralIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OvrlItmGeneralIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/TotalCreditCheckStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/HeaderBillgIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OvrlItmBillingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OverallPricingIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/HeaderDelivIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/OvrlItmDelivIncompletionSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/DepartmentClassificationByCust">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/RqmtIsSupAssgmtRelevant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/AgrmtValdtyStartDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/AgrmtValdtyEndDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesDocumentHasRejection">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/PricingType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/ReleaseDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesDocsInclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesDocsExclusionListValue">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrdItemsAreSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrdItemIsSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrdHeadersAreSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/SalesOrdGnrcArticleIsSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/MngSlsOrdsMassUpdateExecMode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType/FormattedSalesDocumentItem">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoEditSlsOrdItmType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementSegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrderItem"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/SlsOrdDeviationCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/DeviationCategoryName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/DeviationExecMode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/SlsOrdDvtnValueTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/CustMstrDvtnValTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsGenericItmDvtnsType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Order"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Orders"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeviatedFieldName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrderFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerMasterFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartnerFunctionName"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>SalesOrder</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>SalesOrder</PropertyPath>
+                        <PropertyPath>SalesDocumentItem</PropertyPath>
+                        <PropertyPath>DeviatedFieldName</PropertyPath>
+                        <PropertyPath>SalesOrderFieldValue</PropertyPath>
+                        <PropertyPath>CustomerMasterFieldValue</PropertyPath>
+                        <PropertyPath>PartnerFunctionName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/DeviationCategoryCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/SlsOrdDeviationCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/DeviationCategoryName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/SlsOrdDvtnValueTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/CustMstrDvtnValTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsHdrDeviationsType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Order"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Orders"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeviatedFieldName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrderFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerMasterFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartnerFunctionName"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>SalesOrder</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>SalesOrder</PropertyPath>
+                        <PropertyPath>DeviatedFieldName</PropertyPath>
+                        <PropertyPath>SalesOrderFieldValue</PropertyPath>
+                        <PropertyPath>CustomerMasterFieldValue</PropertyPath>
+                        <PropertyPath>PartnerFunctionName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/SlsOrdDeviationCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/SalesDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/DeviationCategoryName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/DeviationExecMode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/InternalComment">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/SlsOrdDvtnValueTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/CustMstrDvtnValTxt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType/RFM_SD_ApplJobAction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsItmDeviationsType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Order"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Orders"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeviatedFieldName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrderFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerMasterFieldValue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartnerFunctionName"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>SalesOrder</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>SalesOrder</PropertyPath>
+                        <PropertyPath>SalesDocumentItem</PropertyPath>
+                        <PropertyPath>DeviatedFieldName</PropertyPath>
+                        <PropertyPath>SalesOrderFieldValue</PropertyPath>
+                        <PropertyPath>CustomerMasterFieldValue</PropertyPath>
+                        <PropertyPath>PartnerFunctionName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/SitnNumberOfInstances">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/SalesOrderItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/Batch">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/OrderQuantityUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/ConfdDelivQtyInOrderQtyUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/AssignedQuantityInBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/BaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/ARunDocumentStatusText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/HigherLevelItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/PricingIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/NetAmount">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/TransactionCurrency">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/FormattedSalesDocumentItem">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType/Material">
+                <Annotation Term="Common.SemanticObject" String="Material"/>
+                <Annotation Term="Common.SemanticObjectMapping">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="LocalProperty" PropertyPath="Material"/>
+                            <PropertyValue Property="SemanticObjectProperty" String="Product"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdGnrcItmType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Generic Product"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                    <Annotation Term="Core.Messages">
+                        <Collection>
+                            <Record>
+                                <PropertyValue Property="message" String="UI.HEADERINFO: TypeNamePlural is mandatory"/>
+                                <PropertyValue Property="severity" String="error"/>
+                            </Record>
+                        </Collection>
+                    </Annotation>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementSegment"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeliveryPriority"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementSegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedQuantityInBaseUnit"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrderItem"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="TypeGenArt">
+                    <Record>
+                        <PropertyValue Property="Text" String="Generic Products"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SalesOrder">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/PurchaseOrderByCustomer">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/TotalNetAmount">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/TransactionCurrency">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/IncotermsLocation1">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/BillingDocumentDate">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/OverallSDProcessStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/OverallSDDocumentRejectionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/OverallTotalDeliveryStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/TotalBlockStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/ConfdReqdRqmtQtyRatioPct">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/AssgdReqdRqmtQtyRatioPct">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/DlvrdReqdRqmtQtyRatioPct">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerConditionGroup1">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerConditionGroup2">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerConditionGroup3">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerConditionGroup4">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerConditionGroup5">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/ARunDocumentStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CustomerPriceGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SitnNumberOfInstances">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/RequirementDocumentNumber">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/CreditControlArea">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalCustomerGroup1">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalCustomerGroup2">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalCustomerGroup3">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalCustomerGroup4">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalCustomerGroup5">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalMaterialGroup1">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalMaterialGroup2">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalMaterialGroup3">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalMaterialGroup4">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AdditionalMaterialGroup5">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_AggregatedScheduleLine">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ARunDocumentStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ARunRelevancy">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ContactPersonStdDepartment">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_CreatedByUser">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_CustomerGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_CustomerPaymentTerms">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_CustomerPriceGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_CustomerPurchaseOrderType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_DeliveryBlockReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_DeliveryPriority">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_DistributionChannel">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_EditSlsOrdGnrcItm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_EditSlsOrdHdr">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_EditSlsOrdItm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_EngagementProjectItem">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_HdrGeneralIncompletionStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_HeaderBillgIncompletionStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_HeaderBillingBlockReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_HeaderDelivIncompletionStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_IncotermsClassification">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_Item">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OrganizationDivision">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OverallPricingIncompletionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OverallSDDocumentRejectionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OverallSDProcessStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OverallTotalDeliveryStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OvrlItmBillingIncompletionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OvrlItmDelivIncompletionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_OvrlItmGeneralIncompletionSts">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_RetailAddlCustGrp10">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_RetailAddlCustGrp6">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_RetailAddlCustGrp7">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_RetailAddlCustGrp8">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_RetailAddlCustGrp9">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesArea">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesDistrict">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesDocumentType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesOffice">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SalesOrganization">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SDDocumentCategory">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SDDocumentReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ShippingCondition">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ShippingType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_ShipToParty">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsDocHdrIncompltn">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsDocItmIncompltn">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsGnrcDeviations">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsHdrDeviations">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsItemDeviations">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SlsOrdGnrcItm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_SoldToParty">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_TotalBlockStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/to_TotalCreditCheckStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/RequirementType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/ShipToParty">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Common.SemanticObject" String="Customer"/>
+                <Annotation Term="Common.SemanticObjectMapping">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="LocalProperty" PropertyPath="ShipToParty"/>
+                            <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/ARunDocumentStatusText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SalesDocumentRjcnReason">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SitnRowCriticalityCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/HasIncompleteItems">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SalesOrdGnrcArticleIsSelected">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType/SoldToParty">
+                <Annotation Term="Common.SemanticObject" String="Customer"/>
+                <Annotation Term="Common.SemanticObjectMapping">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
+                            <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdHdrType">
+                <Annotation Term="UI.FieldGroup" Qualifier="Additional Business Data">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalMaterialGroup5"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalMaterialGroup4"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalMaterialGroup3"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalMaterialGroup2"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalMaterialGroup1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductGroup"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CustomerPurchaseOrderType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RetailAdditionalCustomerGrp10"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RetailAdditionalCustomerGrp9"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RetailAdditionalCustomerGrp8"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RetailAdditionalCustomerGrp7"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RetailAdditionalCustomerGrp6"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalCustomerGroup5"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalCustomerGroup4"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalCustomerGroup3"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalCustomerGroup2"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AdditionalCustomerGroup1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fashion">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RqmtIsSupAssgmtRelevant"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Organization">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AgrmtValdtyEndDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AgrmtValdtyStartDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="FirstDeliveryDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SDDocumentReason"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CustomerGroup"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesGroup"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesOffice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesDistrict"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OrganizationDivision"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DistributionChannel"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesOrganization"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesDocumentType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SDDocumentCategory"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Overall Status">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesDocumentHasRejection"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OvrlItmDelivIncompletionSts"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HeaderDelivIncompletionStatus"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OverallPricingIncompletionSts"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OvrlItmBillingIncompletionSts"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HeaderBillgIncompletionStatus"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="TotalCreditCheckStatus"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OvrlItmGeneralIncompletionSts"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HdrGeneralIncompletionStatus"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Shipping and Payment">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DeliveryPriority"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ShippingPoint"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DepartmentClassificationByCust"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ShippingType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PricingDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="IncotermsClassification"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CustomerPaymentTerms"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HeaderBillingBlockReason"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DeliveryBlockReason"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CustomerPurchaseOrderDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ShippingCondition"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Document"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="SalesOrder"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                    <Annotation Term="Core.Messages">
+                        <Collection>
+                            <Record>
+                                <PropertyValue Property="message" String="UI.HEADERINFO: TypeNamePlural is mandatory"/>
+                                <PropertyValue Property="severity" String="error"/>
+                            </Record>
+                        </Collection>
+                    </Annotation>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SoldToParty"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistributionChannel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OrganizationDivision"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedDeliveryDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CreatedByUser"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CreationDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShippingCondition"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalBlockStatus"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalCreditCheckStatus"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SoldToParty"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistributionChannel"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OrganizationDivision"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedDeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CreatedByUser"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SitnNumberOfInstances"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>SalesDocument</PropertyPath>
+                        <PropertyPath>SoldToParty</PropertyPath>
+                        <PropertyPath>Material</PropertyPath>
+                        <PropertyPath>Plant</PropertyPath>
+                        <PropertyPath>SalesDocumentDate</PropertyPath>
+                        <PropertyPath>CreatedByUser</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="TypeHead">
+                    <Record>
+                        <PropertyValue Property="Text" String="Header"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/SitnNumberOfInstances">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/SalesOrderItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/OrderQuantityUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/ConfdDelivQtyInOrderQtyUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/DeliveredQuantityInBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/FixedQuantityInBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/SupAssgmtReservedQtyInBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/OnHoldQuantityInBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/BaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/ARunDocumentStatusText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/HigherLevelItem">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/PricingIncompletionStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/TransactionCurrency">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/ItemHasValueAddedService">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/SitnRowCriticalityCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/FormattedSalesDocumentItem">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType/Material">
+                <Annotation Term="Common.SemanticObject" String="Material"/>
+                <Annotation Term="Common.SemanticObjectMapping">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="LocalProperty" PropertyPath="Material"/>
+                            <PropertyValue Property="SemanticObjectProperty" String="Product"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdItmType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Item"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                    <Annotation Term="Core.Messages">
+                        <Collection>
+                            <Record>
+                                <PropertyValue Property="message" String="UI.HEADERINFO: TypeNamePlural is mandatory"/>
+                                <PropertyValue Property="severity" String="error"/>
+                            </Record>
+                        </Collection>
+                    </Annotation>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementSegment"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeliveryPriority"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FormattedSalesDocumentItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedQuantityInBaseUnit"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SitnNumberOfInstances"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrder"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="SalesOrderItem"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="TypeItem">
+                    <Record>
+                        <PropertyValue Property="Text" String="Items"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoSlsOrdSchedLineType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ScheduleLine"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ScheduleLineCategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedDeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequestedQuantityInBaseUnit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MRPRequiredQuantityInBaseUnit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DelivBlockReasonForSchedLine"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoValAddedSrvcItemsType/ValAddedSrvcTransactionNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoValAddedSrvcItemsType/ValAddedSrvcItemGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoValAddedSrvcItemsType/ValAddedSrvcItemNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MaSaDoValAddedSrvcItemsType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValueAddedServiceType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValueAddedSubServiceType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValueAddedServiceProduct"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValAddedSrvcHasToBeOrdered"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValAddedSrvcIncrement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValueAddedServiceChargeCode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValAddedSrvcIsCreatedManually"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValAddedSrvcItemNumberInSD"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MngSlsDocHdrIncompltnType/SDDocumentTable">
+                <Annotation Term="Common.Text" Path="SlsDocIncompletionTableName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MngSlsDocHdrIncompltnType/SDDocumentTableField">
+                <Annotation Term="Common.Text" Path="SlsDocIncompletionFieldName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MngSlsDocItmIncompltnType/SDDocumentTable">
+                <Annotation Term="Common.Text" Path="SlsDocIncompletionTableName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_RFM_MngSlsDocItmIncompltnType/SDDocumentTableField">
+                <Annotation Term="Common.Text" Path="SlsDocIncompletionFieldName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SlsOrdIncompltnFieldVHType/SDDocumentTable">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SlsOrdIncompltnFieldVHType/SDDocumentTableField">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/EmailAddress">
+                <Annotation Term="Communication.IsEmailAddress"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/OrganizationBPName1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/OrganizationBPName2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/BusinessPartnerImageURL">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="UI.IsImageURL"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/HouseNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/InternationalPhoneNumber">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Communication.IsPhoneNumber"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType/InternationalMobilePhoneNumber">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Communication.IsPhoneNumber"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.C_SoldToValueHelpType">
+                <Annotation Term="UI.QuickViewFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Standard Address"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SoldToQuickView"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="SoldToQuickView">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PostalCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CityName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Country"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sold-To Party"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sold-To Parties"/>
+                        <PropertyValue Property="ImageUrl" Path="BusinessPartnerImageURL"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="CustomerName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Customer"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PostalCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Customer"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PostalCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Customer</PropertyPath>
+                        <PropertyPath>CustomerName</PropertyPath>
+                        <PropertyPath>PostalCode</PropertyPath>
+                        <PropertyPath>CityName</PropertyPath>
+                        <PropertyPath>Country</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Communication.Contact">
+                    <Record>
+                        <PropertyValue Property="fn" Path="CustomerName"/>
+                        <PropertyValue Property="adr">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                                    <PropertyValue Property="locality" Path="CityName"/>
+                                    <PropertyValue Property="street" Path="StreetName"/>
+                                    <PropertyValue Property="country" Path="Country"/>
+                                    <PropertyValue Property="code" Path="PostalCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="tel">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.PhoneType/cell"/>
+                                    <PropertyValue Property="uri" Path="InternationalMobilePhoneNumber"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.PhoneType/work Communication.PhoneType/preferred"/>
+                                    <PropertyValue Property="uri" Path="InternationalPhoneNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="email">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/work"/>
+                                    <PropertyValue Property="address" Path="EmailAddress"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Communication.Address" Qualifier="pref">
+                    <Record>
+                        <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                        <PropertyValue Property="locality" Path="CityName"/>
+                        <PropertyValue Property="street" Path="StreetName"/>
+                        <PropertyValue Property="country" Path="Country"/>
+                        <PropertyValue Property="code" Path="PostalCode"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Customer_VHType/CustomerAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Customer_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Customer_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Customer_VHType/BusinessPartnerType">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Customer_VHType/IsCompetitor">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_DeliveryBlockReasonType/DeliveryBlockReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_DeliveryBlockReasonType/DeliveryBlockReason_Text">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_DeliveryPriorityType/DeliveryPriorityDesc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/IndustrySector">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/GrossWeight">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/NetWeight">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/WeightUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/ManufacturerNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ProductVHType/ProductManufacturerNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_SalesOrganizationType/AddressID">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_ShippingPointStdVHType/ShippingPointName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Supplier_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Supplier_VHType/SupplierAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="RFM_MANAGE_SALES_ORDERS_SRV.I_Supplier_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

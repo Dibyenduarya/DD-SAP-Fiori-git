@@ -1,0 +1,30 @@
+<mvc:View controllerName="salesorderapp.ui.controller.DisplayProduct"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title}" showHeader="false">
+        <content>
+
+            <ObjectHeader
+                icon="/images/products.png"
+                iconDensityAware="false"
+                title="{SelectedProductModel>/Product_Text}"
+                number="{SelectedProductModel>/GrossWeight}"
+                numberUnit="{SelectedProductModel>/WeightUnit}"
+                class="sapUiResponsivePadding--header" >
+                <ObjectAttribute text="Product Type: {SelectedProductModel>/ProductType} - {SelectedProductModel>/ProductType_Text}  " />
+                <ObjectAttribute text="Product Group: {SelectedProductModel>/ProductGroup} - {SelectedProductModel>/ProductGroup_Text}" />
+                
+            </ObjectHeader>
+            
+            
+            <IconTabHeader mode="Inline">
+                <items>
+                    <IconTabFilter key="info" text="Info" />
+                    <IconTabFilter key="attachments" text="Attachments" count="3" />
+                    <IconTabFilter key="notes" text="Notes" count="12" />
+                    <IconTabFilter key="people" text="People"/>
+                </items>
+            </IconTabHeader>
+        </content>
+    </Page>
+</mvc:View>

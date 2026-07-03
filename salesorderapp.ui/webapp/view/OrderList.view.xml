@@ -1,0 +1,31 @@
+<mvc:View controllerName="salesorderapp.ui.controller.OrderList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content>
+
+                <List id="_IDGenList1" 
+                    headerText="List of Products" items="{ProductModel>/results}" itemPress="onItemPress" >
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem" 
+                            title="{ProductModel>Product} - {ProductModel>Product_Text}" icon="/images/products.png"
+                            description="{ProductModel>ProductGroup_Text}" type="Navigation"/>
+                    </items>
+                </List> 
+
+
+               <List id="_IDGenList2" 
+                    headerText="Product List - Direct Binding" items="{/I_Product}" growing="true"
+		            growingThreshold="5"
+		            growingScrollToLoad="true">
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem1" 
+                            title="{Product} - {Product_Text}" icon="/images/products.png"
+                            description="{ProductGroup_Text}" />
+                    </items>
+                </List> 
+            
+
+        </content>
+    </Page>
+</mvc:View>
