@@ -5,7 +5,10 @@
         <content>
 
                 <List id="_IDGenList1" 
-                    headerText="List of Products" items="{ProductModel>/results}" itemPress="onItemPress" >
+                    headerText="List of Products Displayed" items="{ProductModel>/results}" itemPress="onItemPress" 
+                    growing="true"
+                    growingThreshold="10"
+                    growingScrollToLoad="true">
                     <items>
                         <StandardListItem id="_IDGenStandardListItem" 
                             title="{ProductModel>Product} - {ProductModel>Product_Text}" icon="/images/products.png"
