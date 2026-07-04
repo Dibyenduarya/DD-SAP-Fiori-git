@@ -36,7 +36,7 @@ function (Controller) {
             var oSelectedObject=oBindingContext.getObject();
             oSelectedProductModel.setData(oSelectedObject);
             oSelectedProductModel.refresh(true);
-
+debugger;
            // var sProductId = oSelectedObject.Product;
 
             // Navigate to the detail view with the selected product ID

@@ -1,5 +1,8 @@
 <mvc:View controllerName="salesorderapp.ui.controller.DisplayProduct"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title}" showHeader="false">
         <content>
@@ -17,14 +20,66 @@
             </ObjectHeader>
             
             
-            <IconTabHeader mode="Inline">
+            <IconTabBar expanded="true" selectedKey="Edit" class="sapUiResponsiveContentPadding" id="idIconTabBarInlineMode"
+		                headerMode="Inline" > 
                 <items>
-                    <IconTabFilter key="info" text="Info" />
-                    <IconTabFilter key="attachments" text="Attachments" count="3" />
-                    <IconTabFilter key="notes" text="Notes" count="12" />
-                    <IconTabFilter key="people" text="People"/>
+                    <IconTabFilter key="Edit" text="Edit Product Details" icon="sap-icon://product" >
+                    
+            <f:SimpleForm id="SimpleFormToolbar"
+                        editable="true"
+                        layout="ResponsiveGridLayout"
+                        labelSpanXL="4"
+                        labelSpanL="3"
+                        labelSpanM="4"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="4"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false"
+                        ariaLabelledBy="Title1" >
+
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<ToolbarSpacer />
+					<Button text="Update" type="Emphasized" icon="sap-icon://save" press="onUpdateProduct"/>
+				</Toolbar>
+			</f:toolbar>
+
+                        <f:content>
+                            <Label text="Product Name" />
+                            <Input value="{SelectedProductModel>/Product_Text}" />
+                            <Label text="Item Category" />
+                            <Input value="{SelectedProductModel>/ItemCategoryGroup_Text}" />
+
+                            <Label text="Maximum Capacity" />
+                            <Input value="{SelectedProductModel>/MaxCapacity}" />
+                            <Input value="{City}" />
+                            <Label text="Country" />
+                            <Select id="country" selectedKey="{Country}">
+                                <items>
+                                    <core:Item text="India" key="India"/>
+                                    <core:Item text="Germany" key="Germany"/>
+                                    <core:Item text="USA" key="USA"/>
+                                </items>
+                            </Select>
+                            <Label text="Net Weight" />
+                            <Input value="{SelectedProductModel>/NetWeight}" description="{SelectedProductModel>/WeightUnit_Text}" />
+                            <Label text="Gross Weight" />
+                            <Input value="{SelectedProductModel>/GrossWeight}" />
+                        </f:content>
+                    </f:SimpleForm>
+
+                    </IconTabFilter>
+                    <IconTabFilter key="attachments" text="Attachments" count="3"  icon="sap-icon://attachment"/>
+                    <IconTabFilter key="notes" text="Notes" count="12" icon="sap-icon://notes" />
+                    <IconTabFilter key="people" text="People" icon="sap-icon://family-care" />
                 </items>
-            </IconTabHeader>
+            </IconTabBar>
         </content>
     </Page>
 </mvc:View>
