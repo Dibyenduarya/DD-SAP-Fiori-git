@@ -52,13 +52,14 @@
 
                         <f:content>
                             <Label text="Product Name" />
-                            <Input value="{SelectedProductModel>/Product_Text}" />
+                            <Input value="{SelectedProductModel>/Product_Text}" id="inputProductName" required="true"/>
                             <Label text="Item Category" />
                             <Input value="{SelectedProductModel>/ItemCategoryGroup_Text}" />
 
                             <Label text="Maximum Capacity" />
-                            <Input value="{SelectedProductModel>/MaxCapacity}" />
-                            <Input value="{City}" />
+                            <Input value="{SelectedProductModel>/MaxCapacity}" change="onMaxCapacityChange"
+                            liveChange="onMaxCapacityLiveChange"
+                              type="Number" maxLength="7"/>
                             <Label text="Country" />
                             <Select id="country" selectedKey="{Country}">
                                 <items>
@@ -68,9 +69,9 @@
                                 </items>
                             </Select>
                             <Label text="Net Weight" />
-                            <Input value="{SelectedProductModel>/NetWeight}" description="{SelectedProductModel>/WeightUnit_Text}" />
+                            <Input value="{SelectedProductModel>/NetWeight}" description="{SelectedProductModel>/WeightUnit_Text}" type="Number"/>
                             <Label text="Gross Weight" />
-                            <Input value="{SelectedProductModel>/GrossWeight}" />
+                            <Input value="{SelectedProductModel>/GrossWeight}" type="Number" maxLength="7"/>
                         </f:content>
                     </f:SimpleForm>
 
