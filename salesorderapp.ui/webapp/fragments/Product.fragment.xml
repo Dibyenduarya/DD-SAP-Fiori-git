@@ -1,0 +1,80 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+
+    <Dialog
+        id="idMyDialog"
+        title="Create a New Product"
+        contentWidth="400px"
+        contentHeight="auto"
+        stretch="{device>/system/phone}"
+        draggable="true"
+        resizable="true"
+        class="sapUiPopupWithPadding">
+<content>
+
+            <f:SimpleForm id="SimpleFormToolbar1"
+                        editable="true"
+                        layout="ResponsiveGridLayout"
+                        labelSpanXL="4"
+                        labelSpanL="3"
+                        labelSpanM="4"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="4"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false"
+                        ariaLabelledBy="Title1" >
+                        <f:content>
+                            <Label text="Product Name" />
+                            <Input value="" id="inputProductNameFr" required="true"/>
+                            <Label text="Item Category" />
+                            <Input value="" />
+
+                            <Label text="Maximum Capacity" />
+                            <Input value="" change="onMaxCapacityChange"
+                            liveChange="onMaxCapacityLiveChange"
+                              type="Number" maxLength="7"/>
+                            <Label text="Country" />
+                            <Select id="countryFr" selectedKey="{Country}">
+                                <items>
+                                    <core:Item text="India" key="India"/>
+                                    <core:Item text="Germany" key="Germany"/>
+                                    <core:Item text="USA" key="USA"/>
+                                </items>
+                            </Select>
+                            <Label text="Net Weight" />
+                            <Input value="" description="" type="Number"/>
+                            <Label text="Gross Weight" />
+                            <Input value="" type="Number" maxLength="7"/>
+
+                            <Label text="Supplier" />
+                            <Input value="" showSuggestion="true" suggestionItems="{/I_Supplier_VH}" >
+
+			<suggestionItems>
+				<core:Item text="{Supplier} - {SupplierName}" />
+			</suggestionItems>
+                            </Input>
+
+                        </f:content>
+                    </f:SimpleForm>
+
+</content>
+        <beginButton>
+            <Button text="Save" type="Emphasized" icon="sap-icon://save" press="onSaveProduct"/>
+        </beginButton>
+
+        <endButton>
+            <Button text="Cancel" icon="sap-icon://cancel" press="onCloseDialog"/>
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

@@ -47,6 +47,7 @@
 				<Toolbar id="TB1">
 					<ToolbarSpacer />
 					<Button text="Update" type="Emphasized" icon="sap-icon://save" press="onUpdateProduct"/>
+                    <Button text="Create New Product" type="Emphasized" icon="sap-icon://add" press="onCreateNewProduct"/>
 				</Toolbar>
 			</f:toolbar>
 
@@ -72,6 +73,15 @@
                             <Input value="{SelectedProductModel>/NetWeight}" description="{SelectedProductModel>/WeightUnit_Text}" type="Number"/>
                             <Label text="Gross Weight" />
                             <Input value="{SelectedProductModel>/GrossWeight}" type="Number" maxLength="7"/>
+
+                            <Label text="Supplier" />
+                            <Input value="{SelectedProductModel>/Supplier}" showSuggestion="true" suggestionItems="{/I_Supplier_VH}" >
+
+			<suggestionItems>
+				<core:Item text="{Supplier} - {SupplierName}" />
+			</suggestionItems>
+                            </Input>
+
                         </f:content>
                     </f:SimpleForm>
 

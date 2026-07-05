@@ -63,7 +63,30 @@ function (Controller, MessageToast, MessageBox) {
                 MessageToast.show("Maximum Capacity is within the limit of" + iMaxLength + " digits.");
                 //oEvent.getSource().setValue(0); // Reset to 0 or any other default value
             }
-        }   
+        }   ,
+        
+        onCreateNewProduct: function () {
+            // Implementation for creating a new product
+            if (this._oDialog) {
+                this._oDialog.open();
+            } else {
+                this._oDialog = sap.ui.xmlfragment("salesorderapp.ui.fragments.Product", this);
+                this.getView().addDependent(this._oDialog);
+                this._oDialog.open();
+            }   
+        },
+
+        onSaveProduct: function () {
+            // Implementation for saving the new product
+alert("Save Product button pressed. Implement the logic to save the product.");
+            this._oDialog.close();
+            // Add logic to save the new product to the backend or perform any necessary actions
+
+        },
+
+        onCloseDialog: function () {
+            this._oDialog.close();
+        }
 
     });
 });
