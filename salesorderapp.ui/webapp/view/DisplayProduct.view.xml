@@ -59,7 +59,7 @@
                             <Label text="Maximum Capacity" />
                             <Input value="{SelectedProductModel>/MaxCapacity}" change="onMaxCapacityChange"
                             liveChange="onMaxCapacityLiveChange"
-                              type="Number" maxLength="7"/>
+                              type="Number" maxLength="7"/> 
                             <Label text="Country" />
                             <Select id="country" selectedKey="{Country}">
                                 <items>
